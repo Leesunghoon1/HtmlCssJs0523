@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>구구단 2~ 9까지 출력하기</h1>
+    <button type="button" onclick="result()">구구단 출력</button>
+    몇단 ? <input type="text" id="userid"><br>
+    <h3 id="result" class=""></h3>
+
+
+    <script>
+         function result() {
+
+            let ja = document.getElementById('userid').value;
+            document.getElementById("result").innerText=``;
+                    for(let i =2; i <= 9; i++) {
+                        document.getElementById("result").innerText+=
+                     `${i}*${ja} = ${ja*i} \n`;
+                    };
+
+
+
+            // for(let i = 2; i <= 9; i++) {
+            //  for(let j = 1; j <= 9; j++) {
+            //     console.log(i * j);
+            //         document.getElementById("result").innerText+=
+            //     ` ${i}*${j} = ${i*j} \n`;
+            // }
+            // }
+        }
+
+        
+            
+        
+    </script>
+</body>
+</html>

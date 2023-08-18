@@ -1,0 +1,82 @@
+.a {
+    color: red;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.naver {
+    background-color: blue;
+}
+
+.a:hover {
+    color: blue;
+}
+.a:active {
+    color: black;
+}
+
+.b {
+    color: blue;
+}
+
+.b:hover {
+    color: aqua;
+}
+.b:active {
+    color: black;
+}
+
+.c {
+    color: aqua;
+}
+
+.c:hover {
+    color: blue;
+}
+.c:active {
+    color: black;
+} 
+
+ul>li {
+    list-style: none;
+    display: inline;
+    margin-right: 20px;
+}
+
+ul>li:nth-child(even) {
+    color: red
+}
+
+ul>li:nth-child(3n) {
+    color: green;
+}
+
+ul>li:nth-child(1) {
+    color: black;
+    font-weight: 999;
+}
+
+ul>li:nth-child(10) {
+    color: black;
+    font-weight: 999;
+}
+
+ul>li:first-child, li:last-child {
+    font-weight: 700;
+}
+
+ul>li:hover {
+    color: 700;
+}
+
+ul>li::after {
+    content: "}";
+}
+
+ul>li::before {
+    content: "{";
+}
+
+/* ::afre : 뒤에 붙이는 가상 값
+   ::before : 전에 붙이는 가상 값
+ */

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #result1{
+        color: green;
+    }
+
+    #result2 {
+        color: red;
+    }
+</style>
+<body>
+
+    <h1>
+        <input type="text" id="myGuess">
+        <button type="button" onclick="com()">전송</button>
+    </h1>
+
+    <h3 id="result1"></h3>
+    <h3 id="result2"></h3>
+
+    <!-- input 파일에 파일명, 확장자 를 입력하여 전송 버튼을 누르면
+         이미지 파일인지 검사하여
+         이미지 파일이면
+         "정상파일입니다." <초록색>
+         이미지 파일이 아니면
+         "이미지 파일만 가능합니다." <빨간색>
+         출력하기
+         이미지파일 : jpg, png, jpeg, gif
+         - 대문자로 된 확장자명도 판단 가능해야 함.
+        
+        -->
+
+        <script>
+        
+        function com() {
+            let myName = (document.getElementById('myGuess').value)
+            
+                if(myName.match(/(jpg|jpeg|png|gif)/ig)){
+                    console.log(myName);
+                    document.getElementById('result1').innerText = `정상 파일입니다.`;
+                }else{
+                    console.log(myName);
+                    document.getElementById('result2').innerText = `이미지 파일만 가능합니다.`;
+                }   
+            
+        }
+        
+        </script>
+</body>
+</html>

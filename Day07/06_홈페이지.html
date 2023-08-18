@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url(/image/Las_Lagunas_Torrevieja_Lagoon_Alicante_Spain_Bing_4K_1366x768.jpg);
+            background-size: cover;
+            /* 이미지 정중앙 넣기 */
+          background-position: center;
+          background-repeat: no-repeat;
+          height: 100vh;
+        }
+
+        .top__left {
+            font-size: 30px;
+            font-weight: 800;
+            color: white;
+            margin-left: 40px;
+            float: left;
+        }
+
+        ul{
+            float: right;
+            list-style-type: none;
+            display: flex;
+            color: white;
+            font-size: 20px;
+            font-weight: 700;
+            margin-right: 80px;
+        }
+        li{
+            padding: 0px;
+            margin: 20px;
+        }
+
+        .body {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .body>p:first-child{
+            font-size: 70px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .body>p:nth-child(2){
+            font-size: 70px;
+            font-weight: 700;
+            color: white;
+            text-align: center;
+        }
+
+        .bottom{
+            padding: 10px;
+            font-size: 15px;
+            position: absolute;
+            width: 100px;
+            height: 20px;
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 2px solid white;
+            border-radius: 20px;
+            text-align: center;
+            text-decoration: none;
+            padding: 20px;
+            font-weight: 900;
+            color: white;
+        }
+        li:hover{
+            color: gray;
+            cursor: pointer;
+        }
+
+        .bottom:hover{
+            background-color: aquamarine;
+        }
+        
+        .body__bottom{
+           
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+        <p class="top__left">DESIGN</p>
+        <form action="#top">
+        <ul >
+            <li>HOME</li>
+            <li>LOING IN</li>
+            <li>SIGN UP</li>
+            <li>BOARD</li>
+        </ul>
+    </form>
+    </div>
+    <div class="body">
+        <p>Welcome to Front-End</p>
+        <P>World!</P>
+        <a href="" class="bottom">Lean More</a>
+        
+    </div>
+</body>
+</html>

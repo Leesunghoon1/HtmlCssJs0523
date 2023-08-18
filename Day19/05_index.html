@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="u">
+
+        <ul>
+            <li><a id="home" class="curr_view" onclick="printImg('this')">메인</a></li>
+            <li><a onclick="printImg('this')">Seoul</a></li>
+            <li><a onclick="printImg('this')">Tojyo</a></li>
+            <li><a onclick="printImg('this')">Paris</li>
+        </ul>
+        <img src="'/image/cat.jpg'" alt="cat" id="cityimg">
+    <br>  
+
+    <script>
+        const clickCity = (elem) => {
+            console.log(elem);
+            console.log(elem.id);
+            let idVal = elem.id;
+            document.getElementById("cityImg").src = 
+            `'/image/${idVal}.jpg'`;
+        }
+    </script>
+</body>
+</html>

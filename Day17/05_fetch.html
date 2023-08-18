@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    header>h1{
+        text-align: center;
+        font-size: 130px;
+        color: red;
+    }
+
+    section>h1{
+        text-align: center;
+        font-size: 130px;
+        color: red;
+    }
+
+    header>h3{
+        text-align: center;
+    }
+
+    
+    div{
+        float: left;
+        margin-left: 320px;
+        margin-top: 100px;
+        padding-top: 20px;
+    }
+
+</style>
+<body>
+    <header id="result"></header>
+    <section id="baba"></section>
+    <!-- <h1 id="result">
+    
+    </h1> -->
+        <!-- <div ></div>
+        <div id="baba1"></div>
+        <div id="baba2"></div> -->
+    <script>
+
+            fetch(`https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json`)
+            .then(resp => resp.json())
+            .then(json => aaa(json)) //성공시
+
+
+            function aaa(resp) {
+                document.getElementById('result').innerHTML = `<h1>${resp.squadName}</h1>
+                <h3>Hometown: ${resp.homeTown}//
+                Formed: ${resp.formed}</h3> `;
+                
+                document.getElementById('baba').innerHTML = `<div id="baba"> <h1>${resp.members[0].name}</h1>
+                <h3>
+                    ${resp.members[0].age}
+                    ${resp.members[0].secretIdentity}
+                </h3>Superpowers:
+                <li>${resp.members[0].powers[0]}</li>
+                <li>${resp.members[0].powers[1]}</li>
+                <li>${resp.members[0].powers[2]}</li> </div>`,
+
+                document.getElementById('baba').innerHTML += `<div id="baba"> <h1>${resp.members[1].name}</h1>
+                <h3>${resp.members[1].age}
+                    ${resp.members[1].secretIdentity}
+                    <li>${resp.members[1].powers[0]}</li>
+                <li>${resp.members[1].powers[1]}</li>
+                <li>${resp.members[1].powers[2]}</li> </div>
+                `
+
+                document.getElementById('baba').innerHTML += `<div id="baba"> <h1>${resp.members[2].name}</h1>
+                <h3>${resp.members[2].age}
+                    ${resp.members[2].secretIdentity}
+                    <li>${resp.members[2].powers[0]}</li>
+                <li>${resp.members[2].powers[1]}</li>
+                <li>${resp.members[2].powers[2]}</li>
+            </div> `;
+                
+            }
+    </script>
+</body>
+</html>
+</html>

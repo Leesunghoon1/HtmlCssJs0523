@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Up Down Game</title>
+</head>
+<body>
+    <!-- window.location.reload() : 새로고침 -->
+    <h1>
+        <button type="button" onclick="computerNum()">랜덤 숫자 생성 버튼</button>
+        <button type="button" onclick="window.location.reload()">다시시도</button>
+    </h1>
+
+    <h3 id="printMsg"></h3>
+    <h3 id="result"></h3>
+    <h1>
+        <input type="text" id="myGuess">
+        <button type="button" onclick="computerNum2()">정답~!!</button>
+    </h1>
+    <script>
+        // 변수 선언
+        let comNum = 0;
+        let count = 0;
+        // let myNum = document.getElementById("myGuess").value; // 아무것도 입력되지 않은 빈 영역
+
+        //  랜덤수 생성 메서드
+        function computerNum() {
+            comNum = Math.floor(Math.random()*50)+1;
+            console.log(comNum)
+            document.getElementById("printMsg").innerText = 
+            `컴퓨터가 랜덤수(1~50)를 생성하였습니다.`;
+        }
+
+        // 숫자 비교 메서드
+        function computerNum2() {
+            let str = '';
+                        //숫자로 변환
+        
+            if(count < 5){
+                    let myNum = Number(document.getElementById('myGuess').value); //뭔가 이벤트가 발생했을 때 값이 들어옴 그래서 여기에 써야함
+                    count++;
+                    if(myNum > 0 && myNum < 50){
+                        if(comNum == myNum){
+                            str =`시도횟수 ${count}, 정답입니다. 컴퓨터의 숫자는 ${comNum}였습니다.`;
+                            document.getElementById('result').innerText = str;
+                            return;
+                        }else if(comNum > myNum){
+                            str = `시도횟수 ${count}, UP!!`; 
+                        }else{
+                            str = `시도횟수 ${count}, DOWN!!`
+                        }
+                    }else{
+                        str = `1~50 사이의 숫자만 가능합니다.`;
+                    }
+                
+            }else{
+                str = `시도횟수 ${count}회가 초과되었습니다.`
+            }
+      
+
+
+        document.getElementById('result').innerText = str;
+        }
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // let user = 0;
+// let count = 0;
+// let num = 0;
+// let com = 0;
+// function comnum() {
+//     com = Math.floor(Math.random()*99)+1;
+//     document.getElementById("result").innerText = `랜덤수 생성`
+// }
+// function play() {
+// while (count != 10) { //무한일 떄는 이것이 계속 트루가 되기에 이게 true반복이 된다... !=이 true반복됨
+//     let myGuess = document.getElementById("myGuess").value
+//     if(count == 5) {
+//         document.getElementById("soso").innerText=`게임 끝 5번 다 누르셧습니다.`;
+//         return ;
+//     }else if(myGuess > com) {
+// 		document.getElementById("soso").innerText=`
+//         내 숫자가 높습니다 ${myGuess} 숫자 ${count +1}횟수
+//         `;
+//         count++;
+//         break;
+// 	}else if(myGuess < com) {
+// 		document.getElementById("soso").innerText=`
+//         내 숫자가 낮습니다 ${myGuess} 숫자 ${count +1}횟수
+//         `;
+//         count++;
+//         break;
+// 	}else {
+// 		document.getElementById("soso").innerText=`
+//         정답입니다 정답은 : ${com}
+//         `;
+// 	}
+// }
+// }
+    </script>
+
+</body>
+</html>
+

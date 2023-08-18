@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        클래스, 객체, 생성자 함수를 통해서 객체를 생성
+    </h1>
+    <script>
+        /*
+        클래스 생성의 기본 문법
+        class MyClass{
+            //생성자
+            constructor(param) {
+                this.
+                ....
+
+            }
+
+            //메서드 정의
+            method01(param){....}
+            method02(param){....}
+            method03(param){....}
+
+            //getter/setter
+            get name(){
+                return this.name
+            }
+            set name() {
+                this.name = value;
+            }
+
+            set name(value) {
+                if(value.length < 4) {
+                    alert("길이가 4글자 이상이여야 합니다.")
+                    return;
+                }
+                this.name = value;
+            }
+        }
+        let user = new MyClass(param);
+        */ 
+
+        /*
+            생성자 함수
+            생성자 함수는 클래스를 함수화
+            일반 함수와 생성자 함수는 기술적인 차이는 없음.
+            1. 반드시 new 를 통해서 실행
+            2. 함수 첫글자는 대문자로,
+
+            function User(name) {
+                this.name = name;
+                this.age = 0;
+                this.print = function(){
+                    console.log(...);
+                    return;
+                }
+            }
+
+            let user = new User("영이");
+            let user2 = new User2("철수");
+            user.age = 20; //변경 가능
+
+
+            클래스 (personClass)
+            firstName, lestName, age, address
+            get personInfo() toString처럼 모든 값을 리턴해주는 get
+        */ 
+
+        class PersonClass{
+            //생성자
+            constructor(firstName, lestName, age, address) {
+                this.firstName = firstName;
+                this.lestName = lestName;
+                this.age = age;
+                this.address = address;
+            };
+
+             get personInfo(){
+                return `${this.firstName}, ${this.lestName}, ${this.age}, ${this.address}`;
+            };
+        }
+
+        let user = new PersonClass("이", "성훈", 20, "부천");
+
+        console.log(user);
+        //메서드 호출할때 info(), get은 info
+        console.log(user.personInfo);
+
+        //생성자 함수에서는 getX
+        function personObject(firstName, lestName, age, address) {
+                this.firstName = firstName;
+                this.lestName = lestName;
+                this.age = age;
+                this.address = address;
+                this.getPersonInfo = function() {
+                    return `${this.firstName}, ${this.lestName}, ${this.age}, ${this.address}`;
+                }
+        }
+
+        let my2 = new personObject("lee", "minji", 20, "buch");
+        console.log(my2);
+        console.log(my2.getPersonInfo());
+
+
+        // 객체
+        const person = {
+            firstName: '',
+            lastName: '',
+            age: '',
+            address: '',
+            // set함수
+            setInfo: function(firstName,lastName,age,address) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+                this.age = age;
+                this.address = address;
+            },
+
+            get personInfo() {
+                return `${this.firstName}, ${this.lestName}, ${this.age}, ${this.address}`;
+            },
+
+            set setFirstName(firstName) {
+                this.firstName = firstName;
+            },
+        };
+
+        person.setInfo("박", "민지", 22, "dlscjs");
+        console.log(person);
+        console.log(person.personInfo);
+
+
+    </script>
+</body>
+</html>

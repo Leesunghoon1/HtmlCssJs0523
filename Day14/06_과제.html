@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>
+    구구단 영역(2*1=2 ~ 9*9=81)내에서 램덤으로 문제를 내면 정답을 맞추는 로직
+</h1>
+<ul>
+    <li>
+        총문제는 10문제 출제
+    </li>
+    <li>
+        문제를 풀 때 정답, 오답의 결과를 나타냄
+    </li>
+    <li>
+        총 10개의 문제중 정답률을 출력
+    </li>
+</ul>    
+<button type="button" onclick="btn1()">문제출제</button>
+<ol id = "q">
+    <!-- <li></li> -->
+    <!-- 정답을 담아서 확인해야함 (객체) (배열도 될것 같긴 함)-->
+</ol>
+<button type="button" onclick="btn2()">정답확인</button>
+<h3 id="h3"></h3>
+
+<script>
+let lwwe = [];
+let player = [];
+let answer = 0;
+
+//  document.getElementById('q').innerHTML = ``;
+function btn1() {
+    console.log(12);
+    for(let i=1; i<=10 ; i++){
+       let ran1 = Math.floor(Math.random()*9)+2;
+       let ran2 = Math.floor(Math.random()*9)+1;
+       lwwe[i] = ran1 * ran2
+       document.getElementById('q').innerHTML += `<li>${ran1} X ${ran2} <input type="text" id = "q${i}"></li>`;
+       
+       }
+
+}
+
+function btn2() {
+    console.log(1);
+    for(let i = 1; i <= 10; i++) {
+        console.log(123);
+       player[i] = document.getElementById(`q${i}`).value; 
+    }
+
+    for(let i = 1; i <= 10; i++) {
+        if(lwwe[i] == player[i]) {
+            document.getElementById(`q${i}`).style.backgroundColor = "green";
+            answer++;
+        }else{
+            document.getElementById(`q${i}`).style.backgroundColor = "red";
+        }
+    }
+    document.getElementById('h3').innerText=
+            `맞춘갯수 : ${answer} 개, 정답률 : ${answer / 10 * 100} %`
+}
+
+</script>
+
+
+</body>
+</html>

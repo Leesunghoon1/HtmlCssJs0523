@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        text-align: center;
+    }
+    #aatop{
+        text-align: center;
+    }
+    #atop{
+        text-align: center;
+        width: 300px;
+        height: 50px;
+        background-color: aquamarine;
+        margin: 0 auto;
+    }
+    #atop > input{
+        margin-top: 13px;
+    }
+    li{}
+</style>
+<body>
+    <div id="aatop">
+        <div><h1>여행 준비물 점검 목록</h1></div>
+        <div id="atop">
+            <input type="text" id="bodyaa">
+            <button type="button" onclick="add()">추가</button>
+        </div>
+        <ul id="result"></ul>
+    </div>
+
+
+    <script>
+        const myMap = [];
+        const bodyaa = document.getElementById('bodyaa');
+        const result = document.getElementById('result');
+        let subVal;
+
+
+
+        function add(){
+            subVal = document.getElementById("bodyaa").value;
+            myMap.push(subVal);
+        const result = document.getElementById('result');
+        let str=''; 
+            myMap.forEach(function(v) {
+                str += `<li id="myLi[i]">${v}<button button id="myButton" onclick="removeLi()">x</button></li>`;
+            })
+            result.innerHTML = str;
+        }
+
+        function removeLi() {
+
+            for(let a of myMap) {
+            }
+        }
+
+
+    </script>
+</body>
+</html>

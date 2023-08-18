@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" id="abc">랜덤번호 6개 출력하기</button>
+    <h3 id="q"></h3>
+    <button type="button" id="acc">당첨번호 7개(마지막은 보너스)출력하기</button>
+    <h3 id="w"></h3>
+    <button type="button" id="ccc">결과확인</button>
+    <h3 id="g"></h3>
+
+</body>
+
+<script>
+    const testSet = new Set([]);
+    const testSet2 = new Set([]);
+    const lll = [];
+    const ooo = [];
+    let count = 0;
+    let aaa = [];
+
+    document.getElementById("abc").addEventListener('click', function(){    
+        
+        while(testSet.size != 6) {
+            testSet.add(makeRandomDan())
+             }  
+             document.getElementById('q').innerText = ``
+             for(const iter of testSet.keys()) {
+                document.getElementById('q').innerText += `${iter}
+                `; 
+          }
+        })
+
+    
+        function makeRandomDan(){
+            return Math.floor(Math.random()*45)+1; //2~9 8개
+        }
+
+        document.getElementById("acc").addEventListener('click', function(){    
+        
+            while(testSet2.size != 7) {
+                 testSet2.add(makeRandomDan())
+             }  
+             document.getElementById('w').innerText = ``
+             for(const iter1 of testSet2.keys()) {
+                document.getElementById('w').innerText += `${iter1}
+                `; 
+          }
+             
+        })
+
+        document.getElementById("ccc").addEventListener('click', function(){ 
+            testSet.forEach(function(v,i,s) {
+                lll.push(v);
+                
+                })
+                console.log(lll);
+                testSet2.forEach(function(v,i,s) {
+                ooo.push(v);
+                })
+
+
+           
+                for(let i = 0; i <= 6; i++) {
+                    if(lll(i) == ooo(i)) {
+                        aaa[i]++;
+                        count++;
+                        console.log(count);
+                        document.getElementById('g').innerText += `${iter1}`
+                
+                    }
+                }
+        })
+        
+       
+
+        
+
+</script>
+</html>

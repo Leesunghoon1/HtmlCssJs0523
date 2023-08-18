@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        .contatiner{
+            width: 300px;
+            /* 가운데 정렬 auto */
+            margin: 20px auto;
+            border: 1px solid black;
+        }
+        .top, .bt {
+            width: 90%;    
+            height: 50px;
+            text-align: center;
+            /* 폰트 사이즈 2배 2em */
+            font-size: 2em;
+            /* 굻기 */
+            font-weight: 700;
+            border: 3px solid black;
+            line-height: 50px;
+            margin: 20px auto;
+        }
+
+        .mid {
+            width: 90%;
+            height: 250px;
+            border: 3px solid black;
+            margin: 20px auto;
+            position: relative;
+        }
+
+        .red, .green, .blue {
+            width: 100px;
+            height: 100px;
+            box-shadow: 5px 5px 5px rgb(146, 146, 146);
+            position: absolute;
+        }
+
+        .red {
+            background-color: red;
+            top: 40px;
+            left: 40px;
+            z-index: 50;
+        }
+
+        .green {
+            background-color: green;
+            top: 80px;
+            left: 80px;
+            z-index: 30;
+        }
+
+        .blue {
+            background-color: blue;
+            top: 120px;
+            left: 120px;
+            z-index: 10;
+        }
+    </style>
+<body>
+    <div class="contatiner">
+        <div class="top">텍스트</div>
+        <div class="mid">
+            <div class="red"></div>
+            <div class="green"></div>
+            <div class="blue"></div>
+        </div>
+        <div class="bt">텍스트</div>
+    </div>
+</body>
+</html>

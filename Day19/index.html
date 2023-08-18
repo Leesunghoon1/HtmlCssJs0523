@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/day03/style.css">
+</head>
+
+<body class="paris-page">
+    <!-- <div class="tra"> -->
+        <h1  class="tra">Travel</h1>
+    <!-- </div> -->
+    <ul class="u">
+
+        <ul>
+            <li><a onclick="printImg('home')">메인</a></li>
+            <li><a onclick="printImg('seoul')">Seoul</a></li>
+            <li><a onclick="printImg('tojyo')">Tojyo</a></li>
+            <li><a onclick="printImg('paris')">Paris</li>
+        </ul>
+        <img src="" alt="" id="img">
+    <br>  
+    
+
+    <script>
+        function printImg(contry) 
+        {
+            switch(contry) {
+                case 'home':img.src='/image/cat.jpg';
+                break;
+                case 'seoul':img.src='/image/dog.jpg';
+                break;
+                case 'tojyo':img.src='/image/노트북.jpg';
+                break
+                case 'paris':img.src='/image/마우스.jpg';
+                break;
+
+            }
+        }
+        
+        // img.src='/image/'
+        document.getElementById('bbb').addEventListener('click',()=>{
+            
+        })
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend style="text-align: center;">이벤트를 활용한 데이터 전송</legend>
+                name : <input type="text" id="name"><br>
+                Korean : <input type="text" id="Korean"><br>
+                English : <input type="text" id="English"><br>
+                math : <input type="text" id="Math"><br>
+                <button type="button" onclick="agv()">전송</button>
+        </fieldset>
+    </form>
+
+    <h3 id="info"></h3>  
+
+    <script>
+        //이름, 국어, 영어, 수학 점수를 입력받아
+        //합계와 평균을 출력
+        function agv(){
+                let name = document.getElementById('name').value;
+                console.log(name);    
+                let Korean = document.getElementById("Korean").value;
+                console.log(Korean);
+                let English = document.getElementById("English").value;
+                console.log(English);
+                let Math = document.getElementById("Math").value;
+                console.log(Math);
+
+                // parseInt() 값 인트로 변경
+
+                Korean=Number(Korean);
+                English=Number(English);
+                Math=Number(Math);
+
+                // document.getElementById("sum").innerText=`
+                // 이름:${name}, 합계:${sum}, 평균:${avg}
+                // `;
+
+                let info = document.getElementById("info");
+
+                    info.innerText = `이름 : ${name}
+                    `,
+                    info.innerText += `국어 점수 : ${Korean},
+                    `,
+                    info.innerText += `영어 점수 : ${English}, 
+                    `,
+                    info.innerText += `수학 점수 : ${Math},
+                    `;
+                    info.innerText += `합계 : ${Korean+English+Math} 평균 : ${(Korean+English+Math)/3}`;
+        }
+    </script>
+</body>
+</html>

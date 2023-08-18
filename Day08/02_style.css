@@ -1,0 +1,104 @@
+@import url(/day08/01_reset.css);
+.container{
+    /* % 는 부모가 기준 */
+    width: 100%;
+    /* vh : 모니터(브라우저) 높이 기준 *//* 전체부라우저를 감짜려고*/
+    height: 100vh;
+    background-size: cover;
+}
+.container .header{
+    width: 95%;
+    height: 80px;
+    margin: 0 auto;
+    display: flex; /*블록요소들을 좀 편하게 쓸수 있게 해줌*//*내가 플렉스가 아니라 내 아래 자식을 배치하기 쉽게 플렉스 주겠다*/
+    justify-content: space-between; /*어떻게 정렬할래? : 양쪽으로 갈라(space-between)*/
+    padding-top: 20px;
+}
+
+
+.container .header h1 a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.container .header .nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .header .nav ul li {
+    margin: 0 10px;
+}
+
+.container .header .nav ul li a{ 
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.container .menu{
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+    margin: 80px;
+}
+
+.container .main {
+    width: 100%;
+    height: 800px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-image: url(/image/어부\ 1.jpg);
+}
+
+.mid{
+    width: 1500px;
+    /* height: 100%; */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: auto;
+    
+}
+
+.mid img{
+    /* 전체 브라우저의 정 가운데 */
+    width: 300px;
+    height: 300px;
+    margin: 50px 100px;
+        /* 이미지 정중앙 넣기 */
+    background-color: gray;
+    
+}
+
+.mid a ul li{
+    text-align: center;
+    font-size: 22px;
+    font-weight: 400;
+    color: black;
+    padding-bottom: 20px;
+    
+}
+
+.mid a {
+    text-decoration: none;
+}
+
+.footer{
+    display: flex;
+    align-items: flex-end;
+}
+.xx{
+    display: none;
+    position: absolute;
+    color: white;
+}
+.mid a img:hover ~ .xx{
+        display: block;
+}
+
+

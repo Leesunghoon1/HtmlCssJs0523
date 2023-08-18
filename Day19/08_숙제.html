@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="/image/cat.jpg" alt="" id="img">
+    <script>
+
+        let aaa = ["다운로드 (1).jpg", "다운로드 (2).jpg", "다운로드 (3).jpg", "다운로드 (4).jpg"];        
+        const img = document.getElementById("img");
+        function printImg() {
+            let com = Math.floor(Math.random()*3);
+                img.src="/image/"+aaa[com];
+                setTimeout(printImg,1000);
+        }
+        printImg();
+        </script>
+</body>
+</html>

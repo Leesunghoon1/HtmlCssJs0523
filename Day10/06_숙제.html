@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    td{
+            border: 1px solid black;
+            text-align: center;
+            width: 200px;
+            height: 100px;
+            font-weight: 700;
+        }
+</style>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>데이터 리스트</legend>
+            이름 : <input type="text" id="name" ><br>
+            거주지 : <input type="text" id="addr"><br>
+            좋아하는 리스트 : <input type="text" id="favor1"><br><input type="text" id="favor2"><br>
+            <input type="text" id="favor3"> <br>
+            이메일 : <input type="text" id="email"><br>
+            pet 소유 여부 : <input type="text" id="pet"><br>
+            지금 가장 원하는 것 : <input type="text" id="wanna"><br>
+            <button type="button" onclick="getDatas()">객체로 전송</button>
+            <button type="button" onclick="getDatas()">테이블 출력</button>
+
+        </fieldset>
+
+    <script>
+        const dataObj = {
+            name : "",
+            addr : "",
+            favors : {
+                favor1 : "",
+                favor2 : "",
+                favor3 : "",
+            },
+            email : "",
+            pet : "",
+            wanna : ""
+        };
+
+        function printDates() {
+            document.getElementById("nameVal").innerText = dataObj.name;
+            document.getElementById("addrVal").innerText = dataObj.addr;
+            document.getElementById("emailVal").innerText = dataObj.email;
+            document.getElementById("petVal").innerText = dataObj.pet;
+            document.getElementById("wannaVal").innerText = dataObj.wanna;
+
+            let str = `<li>${dataObj.favors.favor1}</li>`;
+            str += `<li>${dataObj.favors.favor2}</li>`
+            str += `<li>${dataObj.favors.favor3}</li>`
+
+            document.getElementById("favors").innerHTML = str;
+
+        }
+
+        function getDatas() {
+            let name = document.getElementById('name').value;
+            dataObj.name = name;
+            tname.innerText = dataObj.name;
+
+            let addr = document.getElementById('addr').value;
+            dataObj.addr = addr;
+            taddr.innerText = dataObj.addr;
+
+            let favor1 = document.getElementById('favor1').value;
+            dataObj.favor1 = favor1;
+            tfavor1.innerText = dataObj.favor1;
+            let favor2 = document.getElementById('favor2').value;
+            dataObj.favor2 = favor2;
+            tfavor2.innerText = dataObj.favor2;
+            let favor3 = document.getElementById('favor3').value;
+            dataObj.favor3 = favor3;
+            tfavor3.innerText = dataObj.favor3;
+            let email = document.getElementById('email').value;
+            dataObj.email = email;
+            temail.innerText = dataObj.email;
+            let pet = document.getElementById('pet').value;
+            dataObj.pet = pet;
+            tper.innerText = dataObj.pet;
+            let wanna = document.getElementById('wanna').value;
+            dataObj.wanna = wanna;
+            twanna.innerText = dataObj.wanna;
+
+            
+            return console.log(`
+            1. 이름 ${dataObj.name} 
+            2. 주소 ${dataObj.addr} 
+            3. 리스트
+                1 ${dataObj.favor1} 
+                2 ${dataObj.favor2}, 
+                3 ${dataObj.favor3},
+            4. 이메일 ${dataObj.email},
+            5. 펫유무 ${dataObj.pet}, 
+            6. 원하는거 ${dataObj.wanna}
+            `)
+            
+        }
+        
+
+        // let 변수명 = 값;
+        // 변수명 = 값;
+    </script>
+
+
+    
+<table class="td">
+        <tr>
+            <th>이름</th>
+            <th id="tname"></th>
+        </tr>
+        <tr>
+            <th>거주지</th>
+            <th id="taddr"></th>
+        </tr>
+        <tr>
+            <th>좋아하는 리스트</th>
+            <td id="tfavor1"></td>
+            <td id="tfavor2"></td>
+            <td id="tfavor3"></td>
+        </tr>
+        <tr>
+            <th>이메일</th>
+            <td id="temail"></td>
+        </tr>
+        <tr>
+            <th>펫유무</th>
+            <td id="tper"></td>
+        </tr>
+        <tr>
+            <th>원하는거</th>
+            <td id="twanna"></td>
+        </tr>
+</table> 
+        </form>
+</body>
+</html>

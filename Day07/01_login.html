@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <style>
+        body{
+            background-color: rgb(218, 189, 248);
+        }
+        .container {
+            /* 가로길이 */
+            width: 300px;
+            /* 화면의 정중앙에 위치하기위한 공식*/
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /*              중요              */
+            border: 1px solid black;
+            background-color: azure;
+            /* 글자 센터 */
+            text-align: center;
+            /* 4각 둥글게 */
+            border-radius: 10px;
+            padding: 20px;
+
+        }
+
+        .text-field{
+            width: 100%;
+            font-size: 15px;
+            padding: 10px;
+
+            /* 박스 사이즈를 패딩까지 포함 하려면 */
+            box-sizing: border-box;
+            /* margin 서로 벌리기 */
+            margin: 10px;
+            border-radius: 10px;
+            border: 0;
+            outline: 0;
+            margin-bottom: 10px;
+        }
+
+        .ptn-input{
+            width: 100%;
+            height: 37px;
+            /* 박스 사이즈를 패딩까지 포함 하려면 */
+            box-sizing: border-box;
+            margin-bottom: 30px;
+            background-color: rgb(218, 189, 248);
+            border-radius: 5px;
+            border: 0;
+            cursor: pointer;
+            color: white;
+        }
+
+
+        .lint>a{
+            text-decoration: none;
+            color: gray;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 전체박스 -->
+    <div class="container"> 
+        <!-- 로그인 전송 기능 form -->
+        <form action="">
+            <!-- 로그인창 -->
+            <input type="text" name="id" placeholder="아이디" class="text-field">
+            <!-- 비밀번호창 -->
+            <input type="password" name="pw" placeholder="비밀번호" class="text-field">
+            <!-- 로그인 버튼 -->
+            <input type="submit" value="로그인" class="ptn-input">
+        </form>
+        <!-- 상태창 -->
+        <div class="link">
+            <a href="#">비밀번호를 잊어버리셨나요</a>
+        </div>
+    </div>
+</body>
+</html>
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <style>
+        body{
+            background-color: rgb(90, 173, 145);
+        }
+        .container{
+            width: 300px;
+            /* 화면의 정중앙에 위치하기 위한 공식 */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: azure;
+            text-align: center;
+            border-radius: 10px;
+            border: 0;
+            padding: 20px;
+        }
+        .text-field{
+            width: 100%;
+            font-size: 15px;
+            padding: 10px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            border: none;
+            outline: none;
+        }
+        .btn-input{
+            width: 100%;
+            height: 37px;
+            box-sizing: border-box;
+            margin-bottom: 30px;
+            background-color: rgb(90, 173, 145);
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            color: white;
+        }
+        .link>a{
+            text-decoration: none;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <input type="text" name="id" placeholder="아이디" class="text-field">
+            <input type="password" name="pw" placeholder="비밀번호" class="text-field">
+            <input type="submit" value="로그인" class="btn-input">
+        </form>
+        <div class="link">
+            <a href="#">비밀번호를 잊어버리셨나요</a>
+        </div>
+    </div>
+</body>
+</html> -->

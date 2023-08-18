@@ -1,0 +1,55 @@
+@import url(01_reset.css);
+
+@font-face {
+    font-family: jua;
+    src: url(/font/Jua-Regular.ttf);
+}
+body{
+    font-family: jua;
+    min-width: 900px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+ul{
+    /* o 없애기 */
+    list-style: none;
+}
+
+.header{
+    height: 60px;
+    /* background-color: aqua; */
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header>a {
+    height: 60px;
+    line-height: 60px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.header>ul{
+    display: flex;
+    justify-content: around;
+}
+
+.header>ul>li{
+    margin: 25px 10px 10px;
+}
+
+.main{
+    width: 100%;
+    height: 400px;
+    background-image: url(/image/cat.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 20px 0;
+}
